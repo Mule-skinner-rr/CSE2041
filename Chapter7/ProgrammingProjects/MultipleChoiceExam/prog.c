@@ -45,7 +45,7 @@ void fgetAnswers(char answers[], int n, FILE *input)
         fclose(input);
         /* closing 'input' pointer so I can re-open it as an append file */
         
-        input = fopen("examdat_1G.txt", "a");
+        input = fopen("examdat.txt", "a");
         /* This opens "examdat_1G" for more data.  "a" stands for append. */
         
         if(input == NULL)
@@ -76,7 +76,7 @@ void fgetAnswers(char answers[], int n, FILE *input)
         fclose(input);
         /* closes 'input' so the program can re-open it as a read, "r", file. */
         
-        input = fopen("examdat_1G.txt", "r");
+        input = fopen("examdat.txt", "r");
         
         if(input == NULL)
             perror("input didn't open\n");
